@@ -1,0 +1,288 @@
+body {
+	max-width:60em;
+	margin:10px auto;
+	font-family:sans-serif;
+	color:#333333;
+}
+
+article, section {
+	border-radius:0px 0.5em 0.5em;
+	border:1px solid;
+	padding:10px;
+	margin:10px;
+}
+
+header {
+	padding:10px;
+	margin:10px;
+}
+
+.deliveryNote_Header {
+	display:grid;
+	grid-template-rows:1fr 1fr 1fr 1fr;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+.deliveryNote_Header_Title {
+	align-self:center;
+	justify-self:end;
+	grid-row-start:1;
+	grid-row-end:2;
+	grid-column-start:1;
+	grid-column-end:5;
+}
+
+.deliveryNote_Header_AddressTo {
+	grid-row-start:3;
+	grid-row-end:5;
+	grid-column-start:1;
+	grid-column-end:4;
+}
+
+.deliveryNote_Header_AddressTo_Title {
+	text-decoration-line:underline;
+	margin-bottom:0.6em;
+	font-weight:bold;
+	font-size:small;
+}
+
+.deliveryNote_Header_AddressFrom {
+	grid-row-start:3;
+	grid-row-end:5;
+	grid-column-start:4;
+	grid-column-end:5;
+}
+
+.deliveryNote_Body {
+	display:grid;
+	grid-template-rows:16;
+	grid-template-columns:4;
+	grid-template-areas:
+		"deliveryNote_Body_Title deliveryNote_Body_Title deliveryNote_Body_Title deliveryNote_Body_Title"
+		"deliveryNote_Body_HeaderData_01 deliveryNote_Body_HeaderData_02 deliveryNote_Body_HeaderData_03 deliveryNote_Body_HeaderData_04"
+		"deliveryNote_Body_Separator deliveryNote_Body_Separator deliveryNote_Body_Separator deliveryNote_Body_Separator"
+		"deliveryNote_Body_OpeningText deliveryNote_Body_OpeningText deliveryNote_Body_OpeningText deliveryNote_Body_OpeningText"
+		"deliveryNote_Body_DataTable deliveryNote_Body_DataTable deliveryNote_Body_DataTable deliveryNote_Body_DataTable"
+		"deliveryNote_Body_ClosingText deliveryNote_Body_ClosingText deliveryNote_Body_ClosingText deliveryNote_Body_ClosingText"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		;
+}
+
+.deliveryNote_Body_Title {
+	 grid-area:deliveryNote_Body_Title;
+	 margin-bottom:0.6em;
+}
+
+.deliveryNote_Body_HeaderData_01 {
+	grid-area:deliveryNote_Body_HeaderData_01;
+}
+
+.deliveryNote_Body_HeaderData_02 {
+	grid-area:deliveryNote_Body_HeaderData_02;
+}
+
+.deliveryNote_Body_HeaderData_03 {
+	grid-area:deliveryNote_Body_HeaderData_03;
+}
+
+.deliveryNote_Body_HeaderData_04 {
+	grid-area:deliveryNote_Body_HeaderData_04;
+}
+
+.deliveryNote_Body_Separator {
+	grid-area:deliveryNote_Body_Separator;
+}
+
+.deliveryNote_Body_OpeningText {
+	grid-area:deliveryNote_Body_OpeningText;
+	margin-bottom:0.6em;
+}
+
+.deliveryNote_Body_DataTable {
+	grid-area:deliveryNote_Body_DataTable;
+	display:grid;
+	grid-template-rows:4;
+	grid-template-columns:13% 36% 13% 19% 19%;
+	grid-template-areas:
+		"deliveryNote_Body_DataTable_HeaderRow_01 deliveryNote_Body_DataTable_HeaderRow_02 deliveryNote_Body_DataTable_HeaderRow_03 deliveryNote_Body_DataTable_HeaderRow_04 deliveryNote_Body_DataTable_HeaderRow_05"
+		"deliveryNote_Body_DataTable_ContentRow_01 deliveryNote_Body_DataTable_ContentRow_02 deliveryNote_Body_DataTable_ContentRow_03 deliveryNote_Body_DataTable_ContentRow_04 deliveryNote_Body_DataTable_ContentRow_05"
+		"deliveryNote_Body_DataTable_SubTotalRow_Empty deliveryNote_Body_DataTable_SubTotalRow_Title deliveryNote_Body_DataTable_SubTotalRow_Title deliveryNote_Body_DataTable_SubTotalRow_Title deliveryNote_Body_DataTable_SubTotalRow_Content"
+		"deliveryNote_Body_DataTable_TotalRow_Empty deliveryNote_Body_DataTable_TotalRow_Title deliveryNote_Body_DataTable_TotalRow_Title deliveryNote_Body_DataTable_TotalRow_Title deliveryNote_Body_DataTable_TotalRow_Content";
+}
+
+.deliveryNote_Body_DataTable {
+	white-space:nowrap;
+	border-style:solid;
+	border-width:thin;
+}
+
+.deliveryNote_Body_DataTable_HeaderRow {
+	background-color:silver;
+	font-weight:bold;
+	border-style:solid;
+	border-width:thin;
+	display:flex;
+	padding:0.2em;
+}
+.deliveryNote_Body_DataTable_HeaderRow_01 {
+	grid-area:deliveryNote_Body_DataTable_HeaderRow_01;
+}
+.deliveryNote_Body_DataTable_HeaderRow_02 {
+	grid-area:deliveryNote_Body_DataTable_HeaderRow_02;
+}
+.deliveryNote_Body_DataTable_HeaderRow_03 {
+	grid-area:deliveryNote_Body_DataTable_HeaderRow_03;
+	justify-content:right;
+}
+.deliveryNote_Body_DataTable_HeaderRow_04 {
+	grid-area:deliveryNote_Body_DataTable_HeaderRow_04;
+	justify-content:right;
+}
+.deliveryNote_Body_DataTable_HeaderRow_05 {
+	grid-area:deliveryNote_Body_DataTable_HeaderRow_05;
+	justify-content:right;
+}
+
+.deliveryNote_Body_DataTable_ContentRow {
+	border-style:solid;
+	border-width:thin;
+	display:flex;
+	padding:0.2em;
+}
+.deliveryNote_Body_DataTable_ContentRow_01 {
+	grid-area:deliveryNote_Body_DataTable_ContentRow_01;
+}
+.deliveryNote_Body_DataTable_ContentRow_02 {
+	grid-area:deliveryNote_Body_DataTable_ContentRow_02;
+}
+.deliveryNote_Body_DataTable_ContentRow_03 {
+	grid-area:deliveryNote_Body_DataTable_ContentRow_03;
+	justify-content:right;
+}
+.deliveryNote_Body_DataTable_ContentRow_04 {
+	grid-area:deliveryNote_Body_DataTable_ContentRow_04;
+	justify-content:right;
+}
+.deliveryNote_Body_DataTable_ContentRow_05 {
+	grid-area:deliveryNote_Body_DataTable_ContentRow_05;
+	justify-content:right;
+}
+
+.deliveryNote_Body_DataTable_SubTotalRow {
+	border-style:solid;
+	border-width:thin;
+	display:flex;
+	padding:0.2em;
+}
+.deliveryNote_Body_DataTable_SubTotalRow_Empty {
+	grid-area:deliveryNote_Body_DataTable_SubTotalRow_Empty;
+}
+.deliveryNote_Body_DataTable_SubTotalRow_Title {
+	grid-area:deliveryNote_Body_DataTable_SubTotalRow_Title;
+}
+.deliveryNote_Body_DataTable_SubTotalRow_Content {
+	grid-area:deliveryNote_Body_DataTable_SubTotalRow_Content;
+	justify-content:right;
+}
+
+.deliveryNote_Body_DataTable_TotalRow {
+	font-weight:bold;
+	border-style:solid;
+	border-width:thin;
+	display:flex;
+	padding:0.2em;
+}
+.deliveryNote_Body_DataTable_TotalRow_Empty {
+	grid-area:deliveryNote_Body_DataTable_TotalRow_Empty;
+	background-color:silver;
+}
+.deliveryNote_Body_DataTable_TotalRow_Title {
+	grid-area:deliveryNote_Body_DataTable_TotalRow_Title;
+	background-color:silver;
+}
+.deliveryNote_Body_DataTable_TotalRow_Content {
+	grid-area:deliveryNote_Body_DataTable_TotalRow_Content;
+	justify-content:right;
+}
+
+.deliveryNote_Body_ClosingText {
+	grid-area:deliveryNote_Body_ClosingText;
+	margin-top:0.6em;
+}
+
+.deliveryNote_Footer {
+	display:grid;
+	grid-template-rows:2;
+	grid-template-columns:4;
+	grid-template-areas:
+		"deliveryNote_Footer_Separator deliveryNote_Footer_Separator deliveryNote_Footer_Separator deliveryNote_Footer_Separator"
+		"deliveryNote_Footer_Content_01 deliveryNote_Footer_Content_02 deliveryNote_Footer_Content_03 deliveryNote_Footer_Content_04";
+}
+.deliveryNote_Footer_Separator {
+	grid-area:deliveryNote_Footer_Separator;
+}
+.deliveryNote_Footer_Content {
+}
+.deliveryNote_Footer_Content_01 {
+	grid-area:deliveryNote_Footer_Content_01;
+}
+.deliveryNote_Footer_Content_02 {
+	grid-area:deliveryNote_Footer_Content_02;
+}
+.deliveryNote_Footer_Content_03 {
+	grid-area:deliveryNote_Footer_Content_03;
+}
+.deliveryNote_Footer_Content_04 {
+	grid-area:deliveryNote_Footer_Content_04;
+}
+
+.empty {
+	grid-area:empty;
+	flex-grow: 1;
+}
+
+nav {
+	background:#fffbf0;
+	border-color:#e7c157;
+}
+
+section {
+	background:#CCE5FF;
+	border-color:#d5d5d5;
+}
+
+article {
+	background:#ffede0;
+	border-color:#df6c20;
+}
+
+footer {
+	font-size:x-small;
+	font-weight:bold;
+	padding:10px;
+	margin:10px;
+}
+
+h1 {
+	margin-top:0.8em;
+	margin-bottom:0.3em
+}
+
+h2 {
+	margin-top:0.8em;
+	margin-bottom:0.3em
+}
+
+h3 {
+	margin-top:0.8em;
+	margin-bottom:0.3em
+}
